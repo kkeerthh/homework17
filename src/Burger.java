@@ -3,30 +3,28 @@ public class Burger {
     public String meat;
     public String cheese;
     public String herbs;
-    public boolean mayo;
+    public String mayo;
 
-
-    public Burger() {
-        this.bun = "бріош";
-        this.meat = "яловичина";
-        this.cheese = "пармезан";
-        this.herbs = "салат";
-        this.mayo = true;
+    public Burger(String bun, String meat, String cheese, String herbs, String mayo) {
+        this.bun = bun;
+        this.meat = meat;
+        this.cheese = cheese;
+        this.herbs = herbs;
+        this.mayo = mayo;
 
         System.out.println("Звичайний бургер: ");
         System.out.println("◇ Булочка: " + bun);
         System.out.println("◇ М'ясо: " + meat);
         System.out.println("◇ Сир: " + cheese);
         System.out.println("◇ Зелень: " + herbs);
-        System.out.println("◇ Майонез: " + (mayo ? "з майонезом" : "без майонеза"));
+        System.out.println("◇ Майонез: " + mayo);
     }
 
-    public Burger(boolean withoutMeat) {
-        this.bun = "бріош";
-        this.meat = "яловичина";
-        this.cheese = "брі";
-        this.herbs = "помідор";
-        this.mayo = !withoutMeat;
+    public Burger(String bun, String meat, String cheese, String herbs) {
+        this.bun = bun;
+        this.meat = meat;
+        this.cheese = cheese;
+        this.herbs = herbs;
 
         System.out.println();
         System.out.println("Дієтичний бургер: ");
@@ -34,26 +32,23 @@ public class Burger {
         System.out.println("◇ М'ясо: " + meat);
         System.out.println("◇ Сир: " + cheese);
         System.out.println("◇ Зелень: " + herbs);
-        System.out.println("◇ Майонез: " + (mayo ? "з майонезом" : "без майонеза"));
     }
 
-    public Burger(String doubleMeat) {
-        this.bun = "бріош";
+    public Burger(String bun, String doubleMeat, String meat, String cheese, String herbs, String mayo) {
+        this.bun = bun;
+        this.meat = meat;
         this.meat = doubleMeat;
-        this.cheese = "чедер";
-        this.herbs = "салат";
-        this.mayo = true;
+        this.cheese = cheese;
+        this.herbs = herbs;
+        this.mayo = mayo;
+
 
         System.out.println();
         System.out.println("Бургер з подвійним м'ясом: ");
         System.out.println("◇ Булочка: " + bun);
-        System.out.println("◇ М'ясо: " + meat);
+        System.out.println("◇ М'ясо: " + doubleMeat + meat);
         System.out.println("◇ Сир: " + cheese);
         System.out.println("◇ Зелень: " + herbs);
-        System.out.println("◇ Майонез: " + (mayo ? "з майонезом" : "без майонеза"));
+        System.out.println("◇ Майонез: " + mayo);
     }
 }
-
-
-
-
